@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ULogger</string>
+    <string name="title_task_detail">Task Detail</string>
+
+    <string name="google_api_key">AIzaSyCtgAP3EyKyMTj1asbnUk1-IH7uA-H29vM</string>
+
+
+    <string name="hello_blank_fragment">Welcome to ULogger</string>
+    <string name="title_activity_task2">Task2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="title_activity_to_be_implement">ToBeImplement</string>
+    <string name="title_activity_task4">Task4</string>
+    <string name="title_activity_task5">Task5</string>
+    <string name="title_activity_task06">Task06</string>
+    <string name="title_activity_task07">Task07</string>
+    <string name="title_activity_task10">Task10</string>
+</resources>

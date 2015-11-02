@@ -1,0 +1,61 @@
+cameraManager = (CameraManager) rootView.getContext().getSystemService(Context.CAMERA_SERVICE);
+            mSurfaceView = (SurfaceView) rootView.findViewById(R.id.cameraPreview);
+            mHolder = mSurfaceView.getHolder();
+            mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+
+            mHolder.addCallback(new SurfaceHolder.Callback2() {
+                @Override
+                public void surfaceRedrawNeeded(SurfaceHolder surfaceHolder) {
+
+                }
+
+                @Override
+                public void surfaceCreated(SurfaceHolder surfaceHolder) {
+                    try {
+                        mCamera = Camera.open();
+                    } catch (RuntimeException e) {
+                        e.printStackTrace();
+                    }
+                    Camera.Parameters param;
+                    param = mCamera.getParameters();
+                    param.setPreviewSize(352, 288);
+                    mCamera.setParameters(param);
+                    try {
+                        mCamera.setPreviewDisplay(surfaceHolder);
+                        mCamera.startPreview();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+                @Override
+                public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
+                    if (surfaceHolder.getSurface() == null) {
+                        return;
+                    }
+                    try {
+
+                        mCamera.stopPreview();
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+
+                        mCamera.setPreviewDisplay(surfaceHolder);
+                        mCamera.startPreview();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+                @Override
+                public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
+                    mCamera.stopPreview();
+                    mCamera.release();
+
+                }
+            });

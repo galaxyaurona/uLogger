@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.oguri.iloggerfirstattempt.Task4$PlaceholderFragment">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:layout_margin="0dp">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Start Scanning"
+                android:id="@+id/scanButton"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Coordinate:"
+                android:visibility="invisible"
+                android:id="@+id/placeCoordinateHistoryTextView"
+                android:textColor="#ffffffff"
+                android:background="#ffff1744"></TextView>
+            <ListView
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/scanResultListView"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:choiceMode="none"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Result "
+                android:id="@+id/saveResultButton" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Scan Result History"
+                android:id="@+id/resultTextView"></TextView>
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resultHistoryListView"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:layout_below="@+id/resultTextView"
+                android:choiceMode="none" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

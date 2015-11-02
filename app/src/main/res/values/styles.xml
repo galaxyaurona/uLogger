@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.V11.Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <!--   your app branding color for the app bar -->
+
+    </style>
+
+</resources>
